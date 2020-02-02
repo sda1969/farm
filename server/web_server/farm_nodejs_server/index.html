@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Контроллер</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="icon" type="image/png" href="/favicon.ico?v=0" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js"></script>
+  </head>  
+  <body>
+    <h1>Управление микроклиматом</h1>
+		<h3>Статус контроллера: <span id="connStatus">Неизвестно</span> </h3>
+	<hr>	
+	
+	<h2>Освещение</h2>
+		<h3> Интенсивность освещения, лм</h3>
+		<table>
+			<tr>
+				<td>Красный уставка:</td>
+				<td> 
+					<input id="red_led" class="setup" type="text" value="">
+	 				<label>измерено:</label> 
+	 				<input id="red_led_sensor" class="sensor" type="text" value="" readonly>
+	 			</td>
+	 		</tr>
+			<tr>
+				<td>Голубой устaвка:</td>
+				<td>
+	 				<input id="blue_led" class="setup" type="text" value="" >
+	 				<label>измерено:</label>
+	 				<input id="blue_led_sensor" class="sensor" type="text" value="" readonly>
+	 			</td>	
+			</tr>
+		</table>
+
+		<h3> Температура охлаждающей воды, градус С</h3>
+		<table>
+			<tr> 
+				<td> На входе:</td>
+				<td><input id="cool_water_in_temp" class="sensor" type="text" value="" readonly></td>
+			</tr>
+			<tr> 
+				<td>На выходе:</td>
+				<td><input id="cool_water_out_temp" class="sensor" type="text" value="" readonly></td>
+			</tr>
+		</table>	
+	<hr>
+	
+	<h2>Орошение </h2">
+		<h3> Температура воды для полива, градус С</h3>
+		<table>
+			<tr> 
+				<td>Измеренное значение:</td>
+				<td><input id="sprinkle_water_temp" class="sensor" type="text" value="" readonly></td>
+			</tr>
+			<tr> 
+				<td>Минимиальное значение, уставка:</td>
+				<td><input id="sprinkle_water_temp_min" class="setup" type="text" value=""></td>
+			</tr>
+			<tr> 
+				<td>Максимальное значение, уставка:</td>
+				<td><input id="sprinkle_water_temp_max" class="setup" type="text" value=""></td>
+			</tr>
+		</table>
+		<h3> Расход воды для полива, л\мин</h3>
+		<table>
+			<tr> 
+				<td>Измеренное мгновенное значение:</td> 
+				<td><input id="sprinkle_water_flow_instant" class="sensor" type="text" value="" readonly></td>
+			</tr>
+			<tr> 
+				<td>Измеренное среднее значение:</td> 
+				<td><input id="sprinkle_water_flow_average" class="sensor" type="text" value="" readonly></td>
+			</tr>
+		</table>	
+		<h3> Клапан, с</h3>
+		<table>
+			<tr>  
+				<td>Время открытия клапана, уставка:</td> 
+				<td><input id="valve_on" class="setup" type="text" value="" ></td>
+			</tr>
+			<tr>
+			  <td>Время закрытия клапана, уставка:</td>
+			  <td> <input id="valve_off" class="setup" type="text" value="" ></td>
+			</tr>
+			<tr>
+				<td>Уровень воды в баке, см :</td> 
+				<td> <input id="tank_level" class="sensor" type="text" value="" ></td>
+			</tr>
+		</table>
+	<hr>
+	
+	<h2>Воздух</h2>
+		<table>
+			<tr> 
+				<td>Температура, градус С :</td> 
+				<td><input id="air_temp" class="sensor" type="text" value="" ></td>
+			</tr>
+			<tr>
+				<td>Влажность, % :</td>
+				<td><input id="air_humidity" class="sensor" type="text" value="" ></td>
+			</tr>
+		</table>
+	<hr>
+	<input type="button" onclick="sendSetup()" value="Отправить уставки в контроллер">
+
+  </body>
+</html>

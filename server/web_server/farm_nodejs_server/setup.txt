@@ -1,0 +1,1 @@
+setup:blue_led=312,red_led=507,sprinkle_water_temp_max=27,sprinkle_water_temp_min=25,valve_off=15,valve_on=10;

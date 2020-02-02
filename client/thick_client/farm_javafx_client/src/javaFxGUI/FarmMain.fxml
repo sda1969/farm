@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import buttonOnEvent.ButtonOnEvent?>
+<?import connectButton.ConnectButton01?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import textFieldSmart.TextFieldSmart?>
+
+<AnchorPane prefHeight="402.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFxGUI.FarmMainController">
+   <children>
+      <HBox layoutX="129.0" layoutY="14.0" maxHeight="-Infinity" prefHeight="40.0" prefWidth="750.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="IP Адрес">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin></Label>
+            <TextFieldSmart fx:id="ipAddrTfs" prefHeight="30.0" prefWidth="149.0" />
+            <ConnectButton01 fx:id="connBtn" prefWidth="324.0" />
+            <ButtonOnEvent fx:id="uploadBtn" prefHeight="30.0" prefWidth="132.0" /> 
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="67.0" layoutY="41.0" prefHeight="10.0" prefWidth="200.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Separator layoutX="300.0" layoutY="48.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="10.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="48.0" />
+      <VBox layoutX="77.0" layoutY="102.0" prefHeight="355.0" prefWidth="296.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Label text="Освещение">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="80.0" top="10.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="40.0" prefWidth="296.0">
+               <children>
+                  <Label text="Интенсивность освещения , Лм">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label text="Датчик" />
+                  <Label text="Уставка" />
+               </children>
+               <padding>
+                  <Insets left="150.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label prefWidth="100.0" text="Красный" />
+                  <TextField fx:id="red_led_Tf" prefHeight="25.0" prefWidth="60.0" />
+                  <TextFieldSmart fx:id="red_led_Tfs" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label prefWidth="100.0" text="Синий" />
+                  <TextField fx:id="blue_led_Tf" prefHeight="25.0" prefWidth="60.0" />
+                  <TextFieldSmart fx:id="blue_led_Tfs" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="40.0" prefWidth="296.0">
+               <children>
+                  <Label text="Температура, датчик град.С">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="120.0" text="Воздух" />
+                  <TextField fx:id="air_temp_Tf" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="120.0" text="Охл. вода вход" />
+                  <TextField fx:id="cool_water_in_temp_Tf" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="120.0" text="Охл. вода выход" />
+                  <TextField fx:id="cool_water_out_temp_Tf" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="40.0" prefWidth="296.0" spacing="10.0">
+               <children>
+                  <Label prefWidth="120.0" text="Влажность, %" />
+                  <TextField fx:id="air_humidity_Tf" prefHeight="25.0" prefWidth="60.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="381.0" layoutY="87.0" prefHeight="355.0" prefWidth="439.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Label text="Орошение">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="140.0" top="10.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="90.0">
+               <children>
+                  <Label text="Датчик" />
+                  <Label text="Уставка" />
+               </children>
+               <padding>
+                  <Insets left="210.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="187.0" text="Температура воды, град С">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="sprinkle_water_temp_Tf" prefHeight="25.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="-17.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Мин" />
+                  <TextFieldSmart fx:id="sprinkle_water_temp_min_Tfs" prefWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="439.0" spacing="30.0">
+               <children>
+                  <Label text="Макс" />
+                  <TextFieldSmart fx:id="sprinkle_water_temp_max_Tfs" prefWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets left="285.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label text="Мгновенный" />
+                  <Label text="Средний">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets left="170.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="379.0" spacing="30.0">
+               <children>
+                  <Label prefWidth="170.0" text="Расход, л\мин" />
+                  <TextField fx:id="sprinkle_water_flow_instant_Tf" prefHeight="25.0" prefWidth="50.0" />
+                  <TextField fx:id="sprinkle_water_flow_average_Tf" prefWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label text="Открыт" />
+                  <Label text="Закрыт">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets left="210.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label prefWidth="170.0" text="Клапан, с" />
+                  <TextFieldSmart fx:id="valve_on_Tfs" prefHeight="25.0" prefWidth="50.0" />
+                  <TextFieldSmart fx:id="valve_off_Tfs" prefHeight="25.0" prefWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="296.0" spacing="30.0">
+               <children>
+                  <Label prefWidth="170.0" text="Уровень воды в баке, см" />
+                  <TextField fx:id="tank_level_Tf" prefHeight="25.0" prefWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

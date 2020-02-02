@@ -1,0 +1,48 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: arial, sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 20px;
+  color: #373fff;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+td{
+   font-size: 14px;
+   color: green;
+}
+
+input{
+	font-size: 16px;
+}
+
+.sensor {
+  background-color: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  width: 5ch;
+}
+
+.setup {
+  background-color: white;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  width: 5ch;
+}  
+
+table  {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
