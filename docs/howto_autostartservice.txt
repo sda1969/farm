@@ -1,0 +1,37 @@
+cd /etc/systemd/system
+copy file deploy.service here or manualy create it:
+sudo nano deploy.service
+
+---enter this text
+[Unit]
+Description=start deploy.sh in user home
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/home/user/
+
+User=user
+Group=user
+
+ExecStart=/home/user/deploy.sh
+
+[Install]
+WantedBy=multi-user.target
+-------end of text
+
+sudo chmod 644 deploy.service
+
+systemctl status deploy.service
+sudo systemctl enable deploy.service
+systemctl status deploy.service
+
+may requested to install:
+sudo apt install policykit-1
+
+sudo systemctl enable deploy.service
+systemctl status deploy.service
+
+copy file deploy.sh and edit it if neccessary to /home/user/deploy.sh
+

@@ -1,0 +1,16 @@
+[Unit]
+Description=start deploy.sh in user home
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/home/user/
+
+User=user
+Group=user
+
+ExecStart=/home/user/deploy.sh
+
+[Install]
+WantedBy=multi-user.target 
