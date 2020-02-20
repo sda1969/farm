@@ -1,20 +1,53 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: arial, sans-serif;
-  margin: 10px;
+  	font-family: arial, sans-serif;
+  	margin: 0px;
+	padding: 0px;
+	--title-height: 80px;
+	--leftside-width: 15%;
+	--content-width: 1360px;
+	max-width: calc(var(--leftside-width) + var(--content-width));
+	margin: auto;
+}
+*{
+  box-sizing: border-box; /*не работает в body*/
 }
 
-h1 {
-  font-style: italic;
-  font-size: 20px;
-  color: #373fff;
-}
-h2 {
-  font-size: 16px;
-}
-h3 {
-  font-size: 14px;
+#title{
+	font-style: italic;
+	background-color: #81f1f1;
+	font-style: italic;
+	font-size: 40px;
+	text-align: center;
+	position: fixed; 
+	height: var(--title-height);
+	width: calc(var(--leftside-width) + var(--content-width));
+	line-height: var(--title-height);
 }
 
+#leftside {
+  	font-size: 18px;
+  	background-color: #f1f1f1;
+	width: var(--leftside-width);
+	height: calc(100% - var(--title-height));
+	display: inline-block;
+	margin-top: var(--title-height);
+	position: fixed;
+	padding: 10px;
+	overflow: auto;  /*иначе не будет прокрутки*/
+}
+
+#content {
+	background-color: #ffffe0;
+	/*width: calc(100% - var(--leftside-width));*/
+	max-width: var(--content-width);
+	height: calc(100% - var(--title-height));
+	display: inline-block;
+	margin-top: var(--title-height);
+	margin-left: var(--leftside-width);
+	padding: 10px;
+	position: fixed; /*иначе не работает height: 100%;*/
+	overflow: auto;  /*иначе не будет прокрутки*/
+}
 
